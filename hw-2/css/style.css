@@ -6,6 +6,7 @@
     --text-color: #2c3e50;  /* Matching the secondary color for consistency */
     --link-color: #3498db;  /* Using primary color for links */
     --font-primary: 'Helvetica Neue', Arial, sans-serif;  /* Modern, readable font */
+    --hover-primary-color: #2a80b9; /* Darker shade of primary color for hover effects */
 }
 
 body {
@@ -46,7 +47,7 @@ a {
 
 a:hover, a:focus {
     text-decoration: underline;  /* Underline on hover for clarity */
-    color: darken(var(--primary-color), 10%);
+    color: var(--hover-primary-color);
 }
 
 /* Layout Containers */
@@ -102,7 +103,7 @@ button {
 }
 
 button:hover {
-    background-color: darken(var(--primary-color), 10%);
+    background-color: var(--hover-primary-color);
 }
 
 /* Responsive Breakpoints for Tablet */
@@ -145,6 +146,27 @@ header img.logo {
 }
 
 @media (min-width: 1024px) {
+    header img.logo {
+    width: 150px; /* Suitable size for desktop */
+    }
+ }
+    
+
+ /* Responsive Navigation Display */
+@media (min-width: 768px) {
+    /* Hide mobile navigation on tablet and desktop */
+    nav #mobile-nav {
+        display: none;
+    }
+
+    /* Display desktop navigation on larger screens */
+    nav #desktop-nav {
+        display: block;
+    }
+}
+
+@media (min-width: 1024px) {
+    /* Additional desktop-specific styles can be placed here */
     header img.logo {
         width: 150px;  /* Suitable size for desktop */
     }
