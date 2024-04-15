@@ -1,0 +1,123 @@
+/* style.css */
+:root {
+    --primary-color: #007bff; /* Blue */
+    --secondary-color: #6c757d; /* Gray */
+    --background-color: #f8f9fa; /* Light gray */
+    --text-color: #333; /* Dark gray */
+    --link-color: #fff; /* White */
+    --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-secondary: 'Georgia', 'Times New Roman', Times, serif;
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+    overflow: hidden;
+}
+
+header, main, footer {
+    padding: 1em;
+    text-align: center;
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--link-color);
+}
+
+#logo {
+    max-width: 200px; /* Logo size */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px; /* Center logo with bottom margin */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--link-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover, nav ul li a:focus {
+    background-color: var(--secondary-color);
+}
+
+footer {
+    background: var(--secondary-color);
+    color: var(--link-color);
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-secondary);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: var(--link-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        display: block;
+        text-align: center;
+    }
+}
