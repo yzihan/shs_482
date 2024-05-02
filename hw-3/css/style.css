@@ -1,0 +1,281 @@
+/* Global Styles and Variables */
+:root {
+    --primary-color: #3498db;  /* Softer blue for a modern feel */
+    --secondary-color: #2c3e50;  /* Dark blue-grey for contrast */
+    --background-color: #ecf0f1;  /* Light grey for a clean background */
+    --text-color: #2c3e50;  /* Matching the secondary color for consistency */
+    --link-color: #3498db;  /* Using primary color for links */
+    --font-primary: 'Helvetica Neue', Arial, sans-serif;  /* Modern, readable font */
+    --hover-primary-color: #2a80b9; /* Darker shade of primary color for hover effects */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(255, 199, 94);
+    font-size: 1rem;  /* Base font size */
+    line-height: 1.5;  /* Increased line height for better readability */
+}
+
+/* Headings and Paragraphs */
+h1, h2, h3, p {
+    margin-top: 0;
+    margin-bottom: 1rem;  /* Uniform margin for vertical rhythm */
+}
+
+h1 {
+    font-size: 2em;  /* Emphasizing the main heading */
+    color: var(--secondary-color);
+}
+
+h2 {
+    font-size: 1.75em;
+    color: var(--primary-color);
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;  /* Cleaner look without underline */
+}
+
+a:hover, a:focus {
+    text-decoration: underline;  /* Underline on hover for clarity */
+    color: var(--hover-primary-color);
+}
+
+.title-h1{
+    color: #fff;
+}
+
+/* table */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+
+/* Layout Containers */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 10px;
+}
+
+/* Navigation Styles */
+header, footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+
+nav{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    padding: 15px;
+}
+.menu-icon span {
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: black;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    padding: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: bold;
+}
+.menu-content {
+    width: 250px;
+    height: 100%;
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    top: 0px;
+    left: 0;
+    padding: 20px 5px;
+}
+
+.menu-content a {
+    display: block;
+    color: black;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.menu-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+/* Form and Button Styling */
+input[type="text"], input[type="email"], textarea, button {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: var(--hover-primary-color);
+}
+
+
+.profile-container{
+    width: 100%;
+}
+
+.profile{
+    width: 100%;
+}
+
+/* Logo Styles */
+.logo {
+    width: 80px;  /* Further reduced width for the logo */
+    height: auto;  /* Maintain aspect ratio */
+    display: block;  /* Ensures it handles margins and alignment properly */
+    margin: 0 auto;  /* Center the logo horizontally */
+}
+
+/* Responsive Adjustments for the logo in Header */
+header img.logo {
+    width: 80px;  /* Consistent smaller logo for mobile devices */
+}
+
+
+
+
+/* Responsive Breakpoints for Tablet */
+@media (min-width: 768px) {
+    body{
+        font-size: 1.2rem;  
+        background-color: rgb(126, 255, 126);
+    }
+
+    h1 {
+        font-size: 2.5em;  /* Larger font for tablets and up */
+    }
+    .container {
+        padding: 30px;  /* More padding for larger screens */
+    }
+
+    nav #mobile-nav {
+        display: none;
+    }
+
+    /* Display desktop navigation on larger screens */
+    nav #desktop-nav {
+        display: block;
+    }
+
+    header img.logo {
+        width: 120px;  /* Appropriately larger logo for tablets */
+    }
+
+
+    nav{
+        position: relative;
+        height: auto;
+    }
+
+    .menu-icon{
+        display: none;
+    }
+
+    .menu-content{
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .menu-content:hover{
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .menu-content a:hover {
+        background-color: transparent;
+    }
+
+    .profile{
+        width: 45%;
+    }
+}
+
+/* Responsive Breakpoints for Desktop */
+@media (min-width: 1024px) {
+    body{
+        font-size: 1.5rem;  
+        background-color: rgb(129, 129, 253);
+    }
+    header img.logo {
+        width: 150px; /* Suitable size for desktop */
+    }
+
+    header img.logo {
+        width: 150px;  /* Suitable size for desktop */
+    }
+
+    h1 {
+        font-size: 3em;  /* Largest font for desktops */
+    }
+    header, footer {
+        padding: 2em 0;  /* More spacious layout for headers and footers */
+    }
+
+    .profile{
+        width: 30%;
+    }
+}
+
+
