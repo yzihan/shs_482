@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=4">
+    <title>Contact Us - Narratives for SEBL</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header role="banner">
+        <div class="container">
+            <img src="images/logo.png" alt="Narratives for SEBL logo" style="width:150px; max-width:100%;" id="logo">
+            <nav role="navigation">
+                <div class="menu-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                  
+                <ul class="menu-content" id="menuContent">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container" role="main">
+        <h1>Contact Us</h1>
+        <form>
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input 
+                    id="name" 
+                    type="text" 
+                    name="name" 
+                    required 
+                    aria-required="true"
+                    onkeyup="validateField(event);"
+                    onblur="validateField(event);"
+                    data-errmsg="You must enter a name"
+                >
+                <div id="name-err" class="errmsg"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email *</label>
+                <input 
+                    id="email" 
+                    type="email" 
+                    name="email" 
+                    required 
+                    aria-required="true" 
+                    onkeyup="validateField(event);"
+                    onblur="validateField(event);"
+                    data-errmsg="You must enter a valid email address"
+                >
+                <div id="email-err" class="errmsg"></div>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+                <input 
+                    id="subject" 
+                    type="text" 
+                    name="subject" 
+                    required 
+                    aria-required="true" 
+                >
+            </div>
+            <div class="form-group">
+                <label for="msg-field">Message *</label>
+                <textarea 
+                    id="msg-field" 
+                    name="message" 
+                    required 
+                    aria-required="true"
+                ></textarea>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2024 Narratives for SEBL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/validate.js" type="text/javascript"></script>
+</body>
+</html>
